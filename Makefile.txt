@@ -1,0 +1,26 @@
+all: Aviso
+
+Aviso:
+	@echo Hay tres programas, especifica cual quieres. "(ListArray, ListLinked o Node)"
+
+ListArray: List.h ListArray.h testListArray.cpp
+	g++ -o testListArray testListArray.cpp
+
+testLA:
+	./testListArray
+
+ListLinked: List.h ListLinked.h testListLinked.cpp
+	g++ -o testListLinked testListLinked.cpp
+
+testLL:
+	./testListLinked
+
+Node: Node.h testNode.cpp
+	g++ -o testNode testNode.cpp
+
+testN:
+	./testNode
+
+clean:
+    clean:
+	rm -rf *.o *.gch *.pch testListArray testListLinked testNode
